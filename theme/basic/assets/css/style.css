@@ -1,0 +1,191 @@
+/* Variables */
+:root{
+  --primary-color: #344a72;
+  --secondary-color: #37a08e;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+
+/* CSS Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utilities */
+body{
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  /* background: var(--light-color); */
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+ul{
+  list-style: none;
+}
+
+.text-secondary{
+  color: var(--secondary-color)
+}
+
+.text-center{
+  text-align: center;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+}
+
+/* Navbar */
+#main-nav{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #888; */
+  background: var(--primary-color);
+  padding: 0.5rem 2.5rem;
+}
+
+#main-nav a{
+  color: var(--light-color);
+}
+
+#main-nav ul{
+  display: flex;
+  align-items: center;
+}
+
+#main-nav ul li{
+  padding: 0 1.5rem;
+}
+
+#main-nav ul li a{
+  border-bottom: 3px transparent solid;
+  transition: border-color 0.5s;
+}
+
+#main-nav ul li a:hover{
+  border-color: var(--light-color);
+}
+
+#main-nav ul li a.current{
+  border-color: var(--secondary-color);
+}
+
+/* Register & Login */
+#register,
+#login{
+  height: 100vh;
+  background: var(--primary-color)
+}
+
+#register .logo,
+#login .logo{
+  margin-bottom: 0.5rem;
+}
+
+#register .container,
+#login .container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+#register .form-wrap,
+#login .form-wrap {
+  background: #fff;
+  padding: 15px 25px 25px 25px;
+  color: #333;
+}
+
+#register .form-wrap h1,
+#register .form-wrap p,
+#login .form-wrap h1,
+#login .form-wrap p {
+  text-align: center;
+}
+
+#register .form-wrap .form-group,
+#login .form-wrap .form-group {
+  margin-top: 15px;
+}
+
+#register .form-wrap .form-group label,
+#login .form-wrap .form-group label {
+  display: block;
+  color: #666
+}
+
+#register .form-wrap .form-group input,
+#login .form-wrap .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+#register .form-wrap button,
+#login .form-wrap button {
+  display: block;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+  background: #49c1a2;
+  padding: 12px;
+  margin-top: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#register .form-wrap button:hover,
+#login .form-wrap button:hover {
+  background: #37a08e;
+}
+
+#register footer,
+#login footer {
+  text-align: center;
+  color: #fff;
+  margin-top: 10px;
+}
+
+#register footer a,
+#login footer a {
+  color: #49c1a2;
+}
+
+/* Footer */
+#main-footer{
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+#main-footer .footer-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+#main-footer .footer-content .code-repo{
+  display: flex;
+  align-items: center;
+}
+
+#main-footer .footer-content .code-repo a{
+  color: var(--light-color);
+  margin: 0.25rem 0.5rem 0 0.5rem;
+}
+
+#main-footer .footer-content .code-repo a .fab:hover{
+  color: var(--secondary-color);
+}
