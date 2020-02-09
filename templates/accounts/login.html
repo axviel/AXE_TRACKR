@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  | Login
+{% endblock %}
+
+{% block content %}
+
+<section id="login">
+  <div class="container">
+    <div class="form-wrap">
+      <h1>Login</h1>
+      <form action="{% url 'login' %}" method="POST">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+          <label for="first-name">Username</label>
+          <input type="text" name="username"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password"/>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+    <!-- login footer -->
+    <footer>
+      <p>Don't have an account? <a href="{% url 'register' %}">Register Here</a></p>
+    </footer>
+  </div>
+</section>
+
+{% endblock %}
