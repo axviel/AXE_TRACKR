@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib import auth
+from django.contrib import auth, messages
 from django.contrib.auth.models import User
 
 def register(request):
@@ -17,24 +17,24 @@ def register(request):
       # Check username
       if User.objects.filter(username=username).exists():
         # Show error
-        # todo implement error message
+        messages.error(request, 'Username already taken')
         return redirect('register')
       else:
         # Check email
         if User.objects.filter(email=email).exists():
           # Show error
-          # todo implement error message
+          messages.error(request, 'Email already taken')
           return redirect('register')
         else:
           # Create the user
           user = User.objects.create_user(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
           user.save()
           # Show success 
-          # todo implement success message
+          messages.success(request, 'Registration successful and you can now login')
           return redirect('login')
     else:
       # Show error
-      # todo implement error message
+      messages.error(request, 'Passwords do not match')
       return redirect('register')
   else:
     return render(request, 'accounts/register.html')
@@ -51,11 +51,11 @@ def login(request):
       # Login user
       auth.login(request, user)
       # Show success 
-      # todo implement success message
+      messages.success(request, 'Login successful')
       return redirect('dashboard')
     else:
       # Show error
-      # todo implement error message
+      messages.error(request, 'Invalid username or password')
       return redirect('login')
   else:
     return render(request, 'accounts/login.html')
@@ -64,7 +64,7 @@ def logout(request):
   if request.method == 'POST':
     auth.logout(request)
     # Show success 
-    # todo implement success message
+    messages.success(request, 'Logout successful')
     return redirect('index')
 
 def dashboard(request):

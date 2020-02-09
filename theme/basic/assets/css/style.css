@@ -212,6 +212,20 @@ p{
   margin-bottom: 1rem;
 }
 
+.alert {
+  color: white;
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
+
+.alert-success {
+  background: green;
+}
+
+.alert-error {
+  background: red;
+}
+
 /* Navbar */
 #main-nav{
   display: flex;

@@ -12,7 +12,7 @@
       {% if 'dashboard' in request.path %}
         class="current"
       {% endif %}
-      href="{% url 'dashboard' %}">Dashboard</a>
+      href="{% url 'dashboard' %}"> {{user.username}} (Dashboard)</a>
     </li>
     
     <li>
