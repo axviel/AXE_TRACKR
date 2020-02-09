@@ -7,7 +7,7 @@
 {% block content %}
 
 <section id="register">
-  <div class="container">
+  <div class="form-container">
     </a>
     <div class="form-wrap">
       <h1>Register</h1>
@@ -39,11 +39,11 @@
           <label for="password2">Confirm Password</label>
           <input type="password" name="password2"/>
         </div>
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
       </form>
     </div>
-    <!-- Register footer -->
-    <footer>
+    <!-- Form footer -->
+    <footer class="form-footer">
       <p>Already have an account? <a href="{% url 'login' %}">Login Here</a></p>
     </footer>
   </div>

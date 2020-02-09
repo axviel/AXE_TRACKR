@@ -1,10 +1,26 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% block title %}
-  | About
-{% endblock %}
+  <link rel="stylesheet" href="assets/css/style.css">
 
-{% block content %}
+  <title>AXE TRACKR | About</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="main-nav">
+    <a href="index.html">
+      <img src="img/logo.png" alt="AXE TRACKR" class="logo">
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="current" href="about.html">About</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
 
   <!-- About -->
   <section id="about">
@@ -24,4 +40,12 @@
     </div>
   </section>
 
-{% endblock %}
+  <!-- Footer -->
+  <footer id="main-footer" class="bg-secondary text-center py-1">
+    <div class="container">
+      <p>Copyright &copy; 2020, AXE TRACKR, All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>

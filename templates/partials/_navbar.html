@@ -2,26 +2,9 @@
 
 <nav id="main-nav">
   <a href="{% url 'index' %}">
-    <h1>
-      <span class="text-secondary">Axe</span> 
-      Trackr
-    </h1>
+    <img src="{% static 'img/logo.png' %}" class="logo" alt="Home">
   </a>
   <ul>
-    <li>
-      <a 
-      {% if '/' == request.path %}
-        class="current"
-      {% endif %}
-      href="{% url 'index' %}">Home</a>
-    </li>
-    <li>
-      <a 
-      {% if 'about' in request.path %}
-        class="current"
-      {% endif %}
-      href="{% url 'about' %}">About</a>
-    </li>
     {% if user.is_authenticated %}
 
     <li>
@@ -31,6 +14,7 @@
       {% endif %}
       href="{% url 'dashboard' %}">Dashboard</a>
     </li>
+    
     <li>
       <a href="javascript:{document.getElementById('logout').submit()}" id="logout-btn">Logout</a>
       <form action="{% url 'logout' %}" id="logout" method="POST">
@@ -43,11 +27,28 @@
 
       <li>
         <a 
+        {% if '/' == request.path %}
+          class="current"
+        {% endif %}
+        href="{% url 'index' %}">Home</a>
+      </li>
+
+      <li>
+        <a 
+        {% if 'about' in request.path %}
+          class="current"
+        {% endif %}
+        href="{% url 'about' %}">About</a>
+      </li>
+
+      <li>
+        <a 
         {% if 'register' in request.path %}
           class="current"
         {% endif %}
         href="{% url 'register' %}">Register</a>
       </li>
+
       <li>
         <a 
         {% if 'login' in request.path %}

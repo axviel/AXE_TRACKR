@@ -6,7 +6,51 @@
 
 {% block content %}
 
-<h1>Home</h1>
+  <!-- Home -->
+  <header id="home">
+    <div class="container">
+      <div class="showcase-container">
+        <div class="showcase-content">
+          <h1>Some Relevant Text</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam provident quas voluptate modi, incidunt quisquam? Iure odio fugit tenetur obcaecati!</p>
+          <a href="register.html" class="btn btn-primary">Register</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home Articles -->
+  <section id="home-articles" class="py-2">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="articles-container">
+        <!-- Project Planning Article -->
+        <article class="card">
+          <img src="static/img/article-project.jpeg" alt="Project Planning">
+          <div>
+            <h3>Project Planning</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+        <!-- Timesheet Article -->
+        <article class="card bg-dark">
+          <img src="static/img/article-report.jpeg" alt="Timesheet Report">
+          <div>
+            <h3>Timesheet Reporting</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+        <!-- Clock In-Out Article -->
+        <article class="card">
+          <img src="static/img/article-clock.jpeg" alt="Clock In And Out">
+          <div>
+            <h3>Clock In And Out</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}
 

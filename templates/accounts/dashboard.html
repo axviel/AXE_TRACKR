@@ -6,6 +6,65 @@
 
 {% block content %}
 
-<h1>Dash</h1>
+  <!-- Dashboard -->
+  <header id="dashboard">
+    <div class="container">
+      <div class="showcase-container">
+        <div class="showcase-content">
+          <h1>User Dashboard</h1>
+          <p>Manage your recent activity</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Articles -->
+  <section id="dashboard-articles" class="py-2">
+    <div class="container">
+      <h2>Recent Activity</h2>
+      <div class="articles-container">
+        <!-- Bug Article -->
+        <article class="card bg-bug">
+          <i class="fas fa-bug fa-2x"></i>
+          <div>
+            <h3>Project A</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+        <!-- Timesheet Article -->
+        <article class="card bg-time">
+          <i class="fas fa-calendar-alt fa-2x"></i>
+          <div>
+            <h3>Timesheet 02/09/2020 -02/15/2020 </h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+        <!-- User Story Article -->
+        <article class="card bg-task">
+          <i class="fas fa-project-diagram fa-2x"></i>
+          <div>
+            <h3>Project B</h3>
+            <p>Created User Story #117</p>
+          </div>
+        </article>
+        <!-- Bug Article -->
+        <article class="card bg-bug">
+          <i class="fas fa-bug fa-2x"></i>
+          <div>
+            <h3>Project B</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+        <!-- Bug Article -->
+        <article class="card bg-bug">
+          <i class="fas fa-bug fa-2x"></i>
+          <div>
+            <h3>Project B</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis enim id fugiat delectus doloribus rem incidunt ipsa maiores sit amet?</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
 {% endblock %}
